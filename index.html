@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c2f8f">
+  <meta name="description" content="Leaders is a modern leadership studio for people building what comes next.">
+  <title>Leaders — Lead what comes next</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Leaders home">
+      <span class="brand-dot" aria-hidden="true"></span>
+      LEADERS<span class="brand-mark">®</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#approach">Approach</a>
+      <a href="#programs">Programs</a>
+      <a href="#stories">Stories</a>
+      <a href="#ideas">Ideas</a>
+    </nav>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu">
+      <span>Menu</span><span class="menu-lines" aria-hidden="true"></span>
+    </button>
+    <button class="pill-button header-cta js-open-diagnostic" type="button">Find your edge <span>↗</span></button>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav aria-label="Mobile navigation">
+      <a href="#approach">Approach <span>01</span></a>
+      <a href="#programs">Programs <span>02</span></a>
+      <a href="#stories">Stories <span>03</span></a>
+      <a href="#ideas">Ideas <span>04</span></a>
+    </nav>
+    <button class="pill-button js-open-diagnostic" type="button">Find your leadership edge ↗</button>
+  </div>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-heading">
+      <img class="hero-image" src="assets/leaders-hero.webp" alt="A diverse group of four leaders in a colorful studio" width="2048" height="1280">
+      <div class="hero-wash" aria-hidden="true"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow light">Leadership, reimagined</p>
+        <h1 id="hero-heading">Lead what<br>comes <em>next.</em></h1>
+        <p class="hero-copy">Build the clarity, courage, and collective power to move people—and possibility—forward.</p>
+        <div class="hero-actions">
+          <button class="button button-citrus js-open-diagnostic" type="button">Discover your edge <span>↗</span></button>
+          <a class="text-link light-link" href="#programs">Explore programs <span>↓</span></a>
+        </div>
+      </div>
+      <div class="hero-stamp" aria-hidden="true">
+        <svg viewBox="0 0 120 120"><defs><path id="circle" d="M60,60 m-43,0 a43,43 0 1,1 86,0 a43,43 0 1,1 -86,0"/></defs><text><textPath href="#circle">BUILD CLARITY • MOVE TOGETHER • </textPath></text><circle cx="60" cy="60" r="6"/></svg>
+      </div>
+      <div class="hero-index" aria-hidden="true"><span>01</span><i></i><span>05</span></div>
+    </section>
+
+    <section class="manifesto section-grid" id="approach">
+      <div class="section-label reveal"><span>01</span> Our conviction</div>
+      <div class="manifesto-copy reveal">
+        <p class="eyebrow">A human advantage</p>
+        <h2>The future belongs to leaders who can hold <span class="marker coral">tension</span>, create <span class="marker blue">clarity</span>, and move <span class="marker yellow">together.</span></h2>
+        <p>Leadership is not a title. It is a daily practice of seeing what others miss, asking better questions, and building the conditions where people do their best work.</p>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="Our impact">
+      <article class="metric reveal"><strong data-counter="12000">0</strong><span>leaders activated</span></article>
+      <article class="metric reveal"><strong data-counter="46">0</strong><span>countries connected</span></article>
+      <article class="metric reveal"><strong data-counter="92" data-suffix="%">0</strong><span>apply a new behavior</span></article>
+      <article class="metric coral-card reveal"><span class="metric-symbol">↗</span><p>Real shifts.<br>Measurable movement.</p></article>
+    </section>
+
+    <section class="programs" id="programs">
+      <div class="programs-head reveal">
+        <div><p class="eyebrow light">Built around your moment</p><h2>Choose your<br><em>next move.</em></h2></div>
+        <p>Focused programs for the moments that shape leaders, teams, and organizations.</p>
+      </div>
+      <div class="program-tabs" role="tablist" aria-label="Leadership programs">
+        <button type="button" role="tab" aria-selected="true" aria-controls="program-panel" data-program="emerging">Emerging leaders</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="program-panel" data-program="executive">Executive teams</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="program-panel" data-program="change">Change makers</button>
+      </div>
+      <div class="program-panel" id="program-panel" role="tabpanel" tabindex="0">
+        <div class="program-number" aria-hidden="true">01</div>
+        <div class="program-content">
+          <p class="eyebrow" id="program-kicker">8 week cohort</p>
+          <h3 id="program-title">Step into your influence.</h3>
+          <p id="program-copy">Turn self-awareness into meaningful action. Build the confidence and tools to lead before the title arrives.</p>
+          <ul id="program-list"><li>Live practice labs</li><li>Peer learning circle</li><li>Personal edge map</li></ul>
+          <button class="text-link dark-link js-open-diagnostic" type="button">See if it fits <span>↗</span></button>
+        </div>
+        <div class="program-visual" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit-core">L</div></div>
+      </div>
+    </section>
+
+    <section class="principles section-grid" id="ideas">
+      <div class="section-label reveal"><span>02</span> How we work</div>
+      <div class="principles-content">
+        <div class="principles-title reveal"><p class="eyebrow">Practice over theory</p><h2>Ideas you can use<br>on <em>Monday.</em></h2></div>
+        <div class="accordion">
+          <article class="accordion-item open">
+            <button type="button" aria-expanded="true"><span><i>01</i> Start with the real work</span><b>−</b></button>
+            <div class="accordion-content"><p>Bring the live challenge into the room. Every tool is tested against the conversations, choices, and constraints already on your desk.</p></div>
+          </article>
+          <article class="accordion-item">
+            <button type="button" aria-expanded="false"><span><i>02</i> Learn in public</span><b>+</b></button>
+            <div class="accordion-content"><p>Leadership grows through observation and honest reflection. Practice with peers who challenge your defaults and expand your range.</p></div>
+          </article>
+          <article class="accordion-item">
+            <button type="button" aria-expanded="false"><span><i>03</i> Make the shift visible</span><b>+</b></button>
+            <div class="accordion-content"><p>Translate intention into small, observable behaviors. Measure what changes in the room, across the team, and through the work.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-section" id="stories">
+      <div class="story-top reveal">
+        <div><p class="eyebrow light">From the field</p><h2>Change you<br>can <em>feel.</em></h2></div>
+        <div class="story-controls"><button class="circle-button" id="story-prev" type="button" aria-label="Previous story">←</button><button class="circle-button" id="story-next" type="button" aria-label="Next story">→</button></div>
+      </div>
+      <div class="story-track" aria-live="polite">
+        <article class="story-card active" data-story="0">
+          <blockquote>“I stopped trying to have every answer. The team got stronger the moment I started creating better questions.”</blockquote>
+          <footer><span class="avatar avatar-coral">AM</span><div><strong>Amina M.</strong><span>VP, Product • Nairobi</span></div></footer>
+        </article>
+        <article class="story-card" data-story="1">
+          <blockquote>“The program gave us a shared language for the conversations we had been avoiding. That changed everything.”</blockquote>
+          <footer><span class="avatar avatar-yellow">JT</span><div><strong>Jon T.</strong><span>Founder • London</span></div></footer>
+        </article>
+        <article class="story-card" data-story="2">
+          <blockquote>“We moved from a group of smart individuals to a team that could actually think—and decide—together.”</blockquote>
+          <footer><span class="avatar avatar-blue">SL</span><div><strong>Sofia L.</strong><span>Chief People Officer • São Paulo</span></div></footer>
+        </article>
+      </div>
+      <div class="story-progress"><i></i></div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-shape shape-one" aria-hidden="true"></div><div class="cta-shape shape-two" aria-hidden="true"></div>
+      <div class="cta-content reveal">
+        <p class="eyebrow">Your move</p>
+        <h2>What kind of leader<br>are you becoming?</h2>
+        <p>Five questions. One useful perspective. A sharper place to begin.</p>
+        <button class="button button-ink js-open-diagnostic" type="button">Find your leadership edge <span>↗</span></button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div><a class="brand footer-brand" href="#top"><span class="brand-dot"></span>LEADERS<span class="brand-mark">®</span></a><p>For people building what comes next.</p></div>
+      <form class="newsletter" id="newsletter-form"><label for="email">One useful idea, every other Friday.</label><div><input id="email" type="email" placeholder="Your email address" required autocomplete="email"><button type="submit" aria-label="Subscribe">→</button></div><p class="form-note" id="form-note" aria-live="polite"></p></form>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Leaders Studio</span><div><a href="#">Privacy</a><a href="#">LinkedIn</a><a href="mailto:hello@leaders.studio">hello@leaders.studio</a></div></div>
+  </footer>
+
+  <dialog class="diagnostic" id="diagnostic-dialog" aria-labelledby="diagnostic-title">
+    <div class="diagnostic-shell">
+      <button class="dialog-close" type="button" aria-label="Close diagnostic">×</button>
+      <div class="diagnostic-aside"><a class="brand"><span class="brand-dot"></span>LEADERS<span class="brand-mark">®</span></a><div><span id="question-count">01 / 05</span><div class="progress"><i id="diagnostic-progress"></i></div><p>There are no wrong answers. Choose the response that feels most like you today.</p></div></div>
+      <div class="diagnostic-main">
+        <section id="diagnostic-questions">
+          <p class="eyebrow">Leadership edge finder</p>
+          <h2 id="diagnostic-title">When the path is unclear, you usually…</h2>
+          <div class="answer-list" id="answer-list"></div>
+          <button class="back-button" id="diagnostic-back" type="button" hidden>← Previous question</button>
+        </section>
+        <section class="diagnostic-result" id="diagnostic-result" hidden>
+          <p class="eyebrow">Your current edge</p><div class="result-badge" id="result-badge">CA</div><h2 id="result-title">The Catalyst</h2><p id="result-copy"></p>
+          <div class="result-bars"><div><span>Vision</span><i><b id="bar-vision"></b></i></div><div><span>Connection</span><i><b id="bar-connection"></b></i></div><div><span>Delivery</span><i><b id="bar-delivery"></b></i></div></div>
+          <button class="button button-citrus" id="result-reset" type="button">Try again ↻</button>
+        </section>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>

@@ -1,0 +1,42 @@
+const $=(selector,scope=document)=>scope.querySelector(selector);const $$=(selector,scope=document)=>[...scope.querySelectorAll(selector)];
+
+const menuButton=$('.menu-button');const mobileMenu=$('#mobile-menu');
+function closeMenu(){menuButton.setAttribute('aria-expanded','false');mobileMenu.hidden=true;document.body.classList.remove('menu-open')}
+menuButton.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')==='true';menuButton.setAttribute('aria-expanded',String(!open));mobileMenu.hidden=open;document.body.classList.toggle('menu-open',!open)});
+$$('#mobile-menu a').forEach(link=>link.addEventListener('click',closeMenu));
+
+const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target)}}),{threshold:.16});
+$$('.reveal').forEach(el=>revealObserver.observe(el));
+
+const counterObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(!entry.isIntersecting)return;const el=entry.target;const target=Number(el.dataset.counter);const suffix=el.dataset.suffix||'';const duration=1300;const start=performance.now();function tick(now){const p=Math.min((now-start)/duration,1);const eased=1-Math.pow(1-p,3);el.textContent=Math.round(target*eased).toLocaleString()+suffix;if(p<1)requestAnimationFrame(tick)}requestAnimationFrame(tick);counterObserver.unobserve(el)}),{threshold:.6});
+$$('[data-counter]').forEach(el=>counterObserver.observe(el));
+
+const programs={
+  emerging:{number:'01',kicker:'8 week cohort',title:'Step into your influence.',copy:'Turn self-awareness into meaningful action. Build the confidence and tools to lead before the title arrives.',items:['Live practice labs','Peer learning circle','Personal edge map'],letter:'L',color:'#ffd447'},
+  executive:{number:'02',kicker:'Bespoke team studio',title:'Think better, together.',copy:'Create the candor, decision habits, and shared direction your senior team needs for consequential work.',items:['Team diagnostic','Live business challenge','90-day fieldwork'],letter:'E',color:'#f15a47'},
+  change:{number:'03',kicker:'6 week intensive',title:'Turn friction into momentum.',copy:'Map the system, mobilize the right voices, and lead change that people can understand, shape, and sustain.',items:['Stakeholder map','Narrative sprint','Momentum plan'],letter:'↗',color:'#dfff4f'}
+};
+$$('.program-tabs button').forEach(tab=>tab.addEventListener('click',()=>{const data=programs[tab.dataset.program];$$('.program-tabs button').forEach(t=>t.setAttribute('aria-selected',String(t===tab)));$('.program-number').textContent=data.number;$('#program-kicker').textContent=data.kicker;$('#program-title').textContent=data.title;$('#program-copy').textContent=data.copy;$('#program-list').innerHTML=data.items.map(item=>`<li>${item}</li>`).join('');$('.orbit-core').textContent=data.letter;$('.program-visual').style.background=data.color}));
+
+$$('.accordion-item button').forEach(button=>button.addEventListener('click',()=>{const item=button.closest('.accordion-item');const open=item.classList.contains('open');$$('.accordion-item').forEach(other=>{other.classList.remove('open');const b=$('button',other);b.setAttribute('aria-expanded','false');$('b',b).textContent='+'});if(!open){item.classList.add('open');button.setAttribute('aria-expanded','true');$('b',button).textContent='−'}}));
+
+let storyIndex=0;const stories=$$('.story-card');function showStory(index){storyIndex=(index+stories.length)%stories.length;stories.forEach((story,i)=>story.classList.toggle('active',i===storyIndex));$('.story-track').style.transform=`translateX(-${storyIndex*100}%)`;$('.story-progress i').style.transform=`translateX(${storyIndex*100}%)`}
+$('#story-prev').addEventListener('click',()=>showStory(storyIndex-1));$('#story-next').addEventListener('click',()=>showStory(storyIndex+1));
+
+$('#newsletter-form').addEventListener('submit',event=>{event.preventDefault();const email=$('#email');$('#form-note').textContent=`You're in — the next field note will arrive at ${email.value}.`;event.target.reset()});
+
+const questions=[
+  {title:'When the path is unclear, you usually…',answers:[['A','Sketch a direction and invite people in','catalyst'],['B','Find the pattern in the noise','architect'],['C','Ask what the team is seeing','coach'],['D','Create the next concrete step','operator']]},
+  {title:'A difficult conversation is coming. You…',answers:[['A','Name the possibility on the other side','catalyst'],['B','Prepare the facts and likely scenarios','architect'],['C','Make space for what needs to be said','coach'],['D','Clarify the decision that must be made','operator']]},
+  {title:'Your team is losing momentum. You…',answers:[['A','Reconnect everyone to the ambition','catalyst'],['B','Diagnose where the system is stuck','architect'],['C','Check what people need to re-engage','coach'],['D','Reset owners, pace, and priorities','operator']]},
+  {title:'People rely on you most for…',answers:[['A','Energy and possibility','catalyst'],['B','Perspective and sense-making','architect'],['C','Trust and honest reflection','coach'],['D','Focus and follow-through','operator']]},
+  {title:'The edge you want to sharpen is…',answers:[['A','Turning vision into shared belief','catalyst'],['B','Making complexity feel clear','architect'],['C','Growing capability in others','coach'],['D','Moving faster without losing quality','operator']]}
+];
+const results={catalyst:{badge:'CA',title:'The Catalyst',copy:'You create movement through possibility. Your edge is turning bold direction into shared conviction—and making enough room for others to shape the route.',bars:[92,78,68]},architect:{badge:'AR',title:'The Architect',copy:'You bring structure to complexity. Your edge is making the model simple enough to move, while staying open to signals that challenge the plan.',bars:[86,63,82]},coach:{badge:'CO',title:'The Coach',copy:'You multiply the capability around you. Your edge is pairing deep trust with direct challenge so care becomes a force for growth.',bars:[71,95,66]},operator:{badge:'OP',title:'The Operator',copy:'You turn intent into reliable progress. Your edge is protecting focus while helping people see the meaning behind the movement.',bars:[67,72,96]}};
+const dialog=$('#diagnostic-dialog');let questionIndex=0;let answers=[];
+function renderQuestion(){const q=questions[questionIndex];$('#diagnostic-title').textContent=q.title;$('#question-count').textContent=`${String(questionIndex+1).padStart(2,'0')} / 05`;$('#diagnostic-progress').style.width=`${(questionIndex+1)*20}%`;$('#answer-list').innerHTML='';q.answers.forEach(([key,label,type])=>{const button=document.createElement('button');button.type='button';button.className='answer-button';button.innerHTML=`<span>${key}</span>${label}`;button.addEventListener('click',()=>{answers[questionIndex]=type;if(questionIndex<questions.length-1){questionIndex++;renderQuestion()}else showResult()});$('#answer-list').append(button)});$('#diagnostic-back').hidden=questionIndex===0;$('#diagnostic-questions').hidden=false;$('#diagnostic-result').hidden=true}
+function showResult(){const counts=answers.reduce((acc,type)=>({...acc,[type]:(acc[type]||0)+1}),{});const type=Object.keys(results).sort((a,b)=>(counts[b]||0)-(counts[a]||0))[0]||'catalyst';const result=results[type];$('#diagnostic-questions').hidden=true;$('#diagnostic-result').hidden=false;$('#result-badge').textContent=result.badge;$('#result-title').textContent=result.title;$('#result-copy').textContent=result.copy;requestAnimationFrame(()=>['vision','connection','delivery'].forEach((name,i)=>$(`#bar-${name}`).style.width=`${result.bars[i]}%`))}
+function openDiagnostic(){questionIndex=0;answers=[];renderQuestion();dialog.showModal();document.body.classList.add('dialog-open')}
+function closeDiagnostic(){dialog.close();document.body.classList.remove('dialog-open')}
+$$('.js-open-diagnostic').forEach(button=>button.addEventListener('click',openDiagnostic));$('.dialog-close').addEventListener('click',closeDiagnostic);dialog.addEventListener('click',event=>{if(event.target===dialog)closeDiagnostic()});$('#diagnostic-back').addEventListener('click',()=>{questionIndex=Math.max(0,questionIndex-1);renderQuestion()});$('#result-reset').addEventListener('click',()=>{questionIndex=0;answers=[];renderQuestion()});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!mobileMenu.hidden)closeMenu()});
