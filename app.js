@@ -1,10 +1,5 @@
 const $=(selector,scope=document)=>scope.querySelector(selector);const $$=(selector,scope=document)=>[...scope.querySelectorAll(selector)];
 
-const menuButton=$('.menu-button');const mobileMenu=$('#mobile-menu');
-function closeMenu(){menuButton.setAttribute('aria-expanded','false');mobileMenu.hidden=true;document.body.classList.remove('menu-open')}
-menuButton.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')==='true';menuButton.setAttribute('aria-expanded',String(!open));mobileMenu.hidden=open;document.body.classList.toggle('menu-open',!open)});
-$$('#mobile-menu a').forEach(link=>link.addEventListener('click',closeMenu));
-
 const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target)}}),{threshold:.16});
 $$('.reveal').forEach(el=>revealObserver.observe(el));
 
@@ -12,9 +7,9 @@ const counterObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
 $$('[data-counter]').forEach(el=>counterObserver.observe(el));
 
 const programs={
-  emerging:{number:'01',kicker:'8 week cohort',title:'Step into your influence.',copy:'Turn self-awareness into meaningful action. Build the confidence and tools to lead before the title arrives.',items:['Live practice labs','Peer learning circle','Personal edge map'],letter:'L',color:'#ffd447'},
-  executive:{number:'02',kicker:'Bespoke team studio',title:'Think better, together.',copy:'Create the candor, decision habits, and shared direction your senior team needs for consequential work.',items:['Team diagnostic','Live business challenge','90-day fieldwork'],letter:'E',color:'#f15a47'},
-  change:{number:'03',kicker:'6 week intensive',title:'Turn friction into momentum.',copy:'Map the system, mobilize the right voices, and lead change that people can understand, shape, and sustain.',items:['Stakeholder map','Narrative sprint','Momentum plan'],letter:'↗',color:'#dfff4f'}
+  emerging:{number:'01',kicker:'8 week cohort',title:'Step into your influence.',copy:'Turn self-awareness into meaningful action. Build the confidence and tools to lead before the title arrives.',items:['Live practice labs','Peer learning circle','Personal edge map'],letter:'L',color:'#d9d3c7'},
+  executive:{number:'02',kicker:'Bespoke team studio',title:'Think better, together.',copy:'Create the candor, decision habits, and shared direction your senior team needs for consequential work.',items:['Team diagnostic','Live business challenge','90-day fieldwork'],letter:'E',color:'#c8b894'},
+  change:{number:'03',kicker:'6 week intensive',title:'Turn friction into momentum.',copy:'Map the system, mobilize the right voices, and lead change that people can understand, shape, and sustain.',items:['Stakeholder map','Narrative sprint','Momentum plan'],letter:'C',color:'#e7e2d8'}
 };
 $$('.program-tabs button').forEach(tab=>tab.addEventListener('click',()=>{const data=programs[tab.dataset.program];$$('.program-tabs button').forEach(t=>t.setAttribute('aria-selected',String(t===tab)));$('.program-number').textContent=data.number;$('#program-kicker').textContent=data.kicker;$('#program-title').textContent=data.title;$('#program-copy').textContent=data.copy;$('#program-list').innerHTML=data.items.map(item=>`<li>${item}</li>`).join('');$('.orbit-core').textContent=data.letter;$('.program-visual').style.background=data.color}));
 
@@ -39,4 +34,3 @@ function showResult(){const counts=answers.reduce((acc,type)=>({...acc,[type]:(a
 function openDiagnostic(){questionIndex=0;answers=[];renderQuestion();dialog.showModal();document.body.classList.add('dialog-open')}
 function closeDiagnostic(){dialog.close();document.body.classList.remove('dialog-open')}
 $$('.js-open-diagnostic').forEach(button=>button.addEventListener('click',openDiagnostic));$('.dialog-close').addEventListener('click',closeDiagnostic);dialog.addEventListener('click',event=>{if(event.target===dialog)closeDiagnostic()});$('#diagnostic-back').addEventListener('click',()=>{questionIndex=Math.max(0,questionIndex-1);renderQuestion()});$('#result-reset').addEventListener('click',()=>{questionIndex=0;answers=[];renderQuestion()});
-document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!mobileMenu.hidden)closeMenu()});
