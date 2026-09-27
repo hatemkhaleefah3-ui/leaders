@@ -10,13 +10,18 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="auth.css">
   <link rel="stylesheet" href="fixes.css">
+  <link rel="stylesheet" href="pages.css">
   <link rel="stylesheet" href="nav.css">
+  <script src="app.js" defer></script>
+  <script src="pages.js" defer></script>
   <script src="auth.js" defer></script>
+  <script src="router.js" defer></script>
 </head>
 <body class="account-page">
-  <header class="account-topbar">
+  <header class="topbar">
     <a class="brand" href="index.html"><span class="brand-shape"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M5 6.5 12 3l7 3.5-7 3.5z"/><path d="M7 9v5.5c0 2 2.3 3.5 5 3.5s5-1.5 5-3.5V9"/></svg></span><span>leaders<small>STUDY</small></span></a>
-    <nav class="account-desktop-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="paths.html">Paths</a><a href="planner.html">Planner</a><a href="community.html">Community</a><a class="active" href="auth.html">Join</a></nav>
+    <nav class="main-nav" aria-label="Main navigation"><a href="index.html"><span>Home</span></a><a href="paths.html"><span>Paths</span></a><a href="planner.html"><span>Planner</span></a><a href="community.html"><span>Community</span></a><a class="active" href="auth.html"><span>Join</span></a></nav>
+    <div class="nav-tools"><span class="streak-pill"><svg viewBox="0 0 24 24"><path d="M13 3s1 4-2 6c-2-3-5-3-5-3s-2 4 0 8c1.4 2.8 3.7 4 6 4 3.3 0 6-2.7 6-6 0-4-5-9-5-9Z"/></svg><b>12</b><span>day streak</span></span></div>
   </header>
 
   <nav class="mobile-nav account-mobile-nav" aria-label="Mobile navigation">
