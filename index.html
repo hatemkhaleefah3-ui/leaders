@@ -9,32 +9,33 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="fixes.css">
+  <link rel="stylesheet" href="nav.css">
   <script src="app.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="topbar">
-    <a class="brand" href="#home" aria-label="Leaders home"><span class="brand-shape"><svg viewBox="0 0 24 24"><path d="M5 6.5 12 3l7 3.5-7 3.5z"/><path d="M7 9v5.5c0 2 2.3 3.5 5 3.5s5-1.5 5-3.5V9"/></svg></span><span>leaders<small>STUDY</small></span></a>
+    <a class="brand" href="index.html" aria-label="Leaders home"><span class="brand-shape"><svg viewBox="0 0 24 24"><path d="M5 6.5 12 3l7 3.5-7 3.5z"/><path d="M7 9v5.5c0 2 2.3 3.5 5 3.5s5-1.5 5-3.5V9"/></svg></span><span>leaders<small>STUDY</small></span></a>
     <nav class="main-nav" aria-label="Main navigation">
-      <a class="active" href="#home"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="m4 11 8-7 8 7v9h-6v-6h-4v6H4z"/></svg></span><span>Home</span></a>
-      <a href="#paths"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M5 5.5A2.5 2.5 0 0 1 7.5 3H20v15H7.5A2.5 2.5 0 0 0 5 20.5z"/><path d="M5 5.5v15M9 7h7M9 11h6"/></svg></span><span>Paths</span></a>
-      <a href="#planner"><span class="nav-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4M17 3v4M3 10h18M8 14h3M8 17h7"/></svg></span><span>Planner</span></a>
-      <a href="#community"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2"/><path d="M3 20c.7-4 2.7-6 6-6s5.3 2 6 6M15 15c3 0 4.8 1.7 5.3 5"/></svg></span><span>Community</span></a>
-      <a class="mobile-profile" href="auth.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 21c.7-4.5 3-7 7-7s6.3 2.5 7 7"/></svg></span><span>Profile</span></a>
+      <a class="active" href="index.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="m4 11 8-7 8 7v9h-6v-6h-4v6H4z"/></svg></span><span>Home</span></a>
+      <a href="paths.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M5 5.5A2.5 2.5 0 0 1 7.5 3H20v15H7.5A2.5 2.5 0 0 0 5 20.5z"/><path d="M5 5.5v15M9 7h7M9 11h6"/></svg></span><span>Paths</span></a>
+      <a href="planner.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4M17 3v4M3 10h18M8 14h3M8 17h7"/></svg></span><span>Planner</span></a>
+      <a href="community.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2"/><path d="M3 20c.7-4 2.7-6 6-6s5.3 2 6 6M15 15c3 0 4.8 1.7 5.3 5"/></svg></span><span>Community</span></a>
+      <a href="auth.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="3"/><path d="M3.5 20c.6-4 2.5-6 5.5-6 1.6 0 2.9.5 3.8 1.4M17 11v8M13 15h8"/></svg></span><span>Join</span></a>
     </nav>
     <div class="nav-tools">
-      <button class="tool-button search-trigger" type="button" aria-label="Search courses"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span>Search</span><kbd>⌘ K</kbd></button>
       <span class="streak-pill"><svg viewBox="0 0 24 24"><path d="M13 3s1 4-2 6c-2-3-5-3-5-3s-2 4 0 8c1.4 2.8 3.7 4 6 4 3.3 0 6-2.7 6-6 0-4-5-9-5-9Z"/><path d="M10 18c-1.2-2 .2-4.1 2-5.5 1.7 1.4 3 3.7 1.8 5.5"/></svg><b>12</b><span>day streak</span></span>
       <a class="join-button" href="auth.html">Join free<span class="button-icon"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
     </div>
   </header>
 
   <nav class="mobile-nav" aria-label="Mobile navigation">
-    <a class="active" href="#home"><svg width="22" height="22" viewBox="0 0 24 24"><path d="m4 11 8-7 8 7v9h-6v-6h-4v6H4z"/></svg><span>Home</span></a>
-    <a href="#paths"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M5 5.5A2.5 2.5 0 0 1 7.5 3H20v15H7.5A2.5 2.5 0 0 0 5 20.5z"/><path d="M5 5.5v15M9 7h7M9 11h6"/></svg><span>Paths</span></a>
-    <a href="#planner"><svg width="22" height="22" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4M17 3v4M3 10h18M8 14h3M8 17h7"/></svg><span>Planner</span></a>
-    <a href="auth.html"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 21c.7-4.5 3-7 7-7s6.3 2.5 7 7"/></svg><span>Profile</span></a>
+    <a class="active" href="index.html"><svg viewBox="0 0 24 24"><path d="m4 11 8-7 8 7v9h-6v-6h-4v6H4z"/></svg><span>Home</span></a>
+    <a href="paths.html"><svg viewBox="0 0 24 24"><path d="M5 5.5A2.5 2.5 0 0 1 7.5 3H20v15H7.5A2.5 2.5 0 0 0 5 20.5z"/><path d="M5 5.5v15M9 7h7M9 11h6"/></svg><span>Paths</span></a>
+    <a href="planner.html"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4M17 3v4M3 10h18M8 14h3M8 17h7"/></svg><span>Planner</span></a>
+    <a href="community.html"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2"/><path d="M3 20c.7-4 2.7-6 6-6s5.3 2 6 6M15 15c3 0 4.8 1.7 5.3 5"/></svg><span>Community</span></a>
+    <a href="auth.html"><svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="3"/><path d="M3.5 20c.6-4 2.5-6 5.5-6 1.6 0 2.9.5 3.8 1.4M17 11v8M13 15h8"/></svg><span>Join</span></a>
   </nav>
 
   <main id="main">
@@ -45,7 +46,7 @@
         <p>Turn big goals into focused sessions, guided learning paths, and progress you can actually feel.</p>
         <div class="hero-actions">
           <button class="primary-button planner-trigger" type="button">Build my study plan<span class="button-icon"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
-          <a class="secondary-button" href="#paths"><span class="button-icon pale"><svg viewBox="0 0 24 24"><path d="M5 5.5A2.5 2.5 0 0 1 7.5 3H20v15H7.5A2.5 2.5 0 0 0 5 20.5z"/><path d="M5 5.5v15M9 7h7M9 11h6"/></svg></span>Explore paths</a>
+          <a class="secondary-button" href="paths.html"><span class="button-icon pale"><svg viewBox="0 0 24 24"><path d="M5 5.5A2.5 2.5 0 0 1 7.5 3H20v15H7.5A2.5 2.5 0 0 0 5 20.5z"/><path d="M5 5.5v15M9 7h7M9 11h6"/></svg></span>Explore paths</a>
         </div>
         <div class="hero-proof"><div class="mini-avatars"><span>AM</span><span>RK</span><span>JL</span><span>+2k</span></div><p><strong>4.9 average rating</strong><br>from focused learners</p></div>
       </div>
@@ -93,9 +94,7 @@
     <section class="final-cta page-shell"><div class="cta-card reveal"><div class="cta-orb one"></div><div class="cta-orb two"></div><span class="section-kicker light">Your next chapter</span><h2>Ready when<br><em>you are.</em></h2><p>Start with one goal. We will help you make it a habit.</p><a class="white-button" href="auth.html">Join Leaders free<span class="button-icon dark"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div></section>
   </main>
 
-  <footer class="footer page-shell"><div class="brand"><span class="brand-shape"><svg viewBox="0 0 24 24"><path d="M5 6.5 12 3l7 3.5-7 3.5z"/><path d="M7 9v5.5c0 2 2.3 3.5 5 3.5s5-1.5 5-3.5V9"/></svg></span><span>leaders<small>STUDY</small></span></div><p>Small sessions. Meaningful progress.</p><div><a href="#paths">Paths</a><a href="#planner">Planner</a><a href="auth.html">Join</a></div></footer>
-
-  <dialog class="search-dialog" id="search-dialog"><div class="search-box"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="course-search" type="search" placeholder="Search paths, subjects, or skills" autocomplete="off"><button class="dialog-close" type="button" aria-label="Close search"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div class="search-hint"><span>Try “data”, “English”, or “design”</span><kbd>ESC</kbd></div></dialog>
+  <footer class="footer page-shell"><div class="brand"><span class="brand-shape"><svg viewBox="0 0 24 24"><path d="M5 6.5 12 3l7 3.5-7 3.5z"/><path d="M7 9v5.5c0 2 2.3 3.5 5 3.5s5-1.5 5-3.5V9"/></svg></span><span>leaders<small>STUDY</small></span></div><p>Small sessions. Meaningful progress.</p><div><a href="paths.html">Paths</a><a href="planner.html">Planner</a><a href="auth.html">Join</a></div></footer>
 
   <dialog class="planner-dialog" id="planner-dialog"><div class="planner-modal"><button class="dialog-close planner-close" type="button" aria-label="Close planner"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button><div class="modal-head"><span class="section-kicker">Personal study planner</span><h2>Build a rhythm<br>that fits.</h2><p>Choose a goal and weekly pace. We will shape the first version of your plan.</p></div><div class="planner-form" id="planner-form"><fieldset><legend>What matters most right now?</legend><div class="choice-grid"><button class="choice active" type="button" data-goal="Exam confidence"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5zM8 8h8M8 12h6M8 16h4"/></svg><span>Exam confidence</span></button><button class="choice" type="button" data-goal="Build a skill"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v6c0 4.5 3.2 7 8 8 4.8-1 8-3.5 8-8V7z"/><path d="m9 12 2 2 4-5"/></svg><span>Build a skill</span></button><button class="choice" type="button" data-goal="Stay consistent"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 3-6.2M4 4v5h5"/></svg><span>Stay consistent</span></button></div></fieldset><fieldset><legend>Minutes per study day</legend><div class="range-row"><input id="minutes-range" type="range" min="15" max="90" value="35" step="5"><output id="minutes-output">35 min</output></div></fieldset><fieldset><legend>Study days per week</legend><div class="day-choices"> <button type="button">M</button><button class="active" type="button">T</button><button type="button">W</button><button class="active" type="button">T</button><button type="button">F</button><button class="active" type="button">S</button><button type="button">S</button></div></fieldset><button class="primary-button generate-plan" type="button">Generate my plan<span class="button-icon"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button></div><div class="plan-result" id="plan-result" hidden><span class="result-check"><svg viewBox="0 0 24 24"><path d="m6 12 4 4 8-9"/></svg></span><p>Your starting rhythm</p><h3 id="result-goal">Exam confidence</h3><div><span><b id="result-sessions">3</b> sessions</span><span><b id="result-minutes">105</b> min / week</span></div><p>Start small this week. You can adjust the rhythm whenever life changes.</p><a class="primary-button" href="auth.html">Save my plan<span class="button-icon"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div></div></dialog>
 </body>
