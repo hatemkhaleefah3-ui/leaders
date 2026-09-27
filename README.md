@@ -1,17 +1,17 @@
-# Leaders
+# Leaders Study
 
-A premium, responsive leadership development website built as a dependency-free static experience.
+A responsive, premium study platform concept built with static HTML, CSS, and JavaScript.
 
-## Features
+## Experience
 
-- Restrained editorial landing page with custom monochrome campaign artwork
-- Five-question leadership edge diagnostic with four result profiles
-- Interactive program explorer, leadership principles accordion, and story carousel
-- Animated impact metrics and scroll reveals
-- Dedicated sign-up and sign-in experience
-- Top navigation on tablet and desktop with a mobile bottom navigation bar
-- Accessible semantic structure, keyboard interactions, reduced-motion support, and responsive navigation
-- No framework or build step required
+- Colorful rounded education interface with custom SVG iconography
+- Desktop and tablet top navigation with compact device-specific tools
+- Fixed mobile bottom navigation optimized for touch
+- Filterable learning paths and keyboard-accessible course search
+- Interactive personal study-plan generator
+- Responsive dashboard preview, weekly rhythm visualization, and community content
+- Dedicated sign-up and sign-in page
+- Reduced-motion support and semantic navigation
 
 ## Run locally
 
@@ -19,12 +19,6 @@ A premium, responsive leadership development website built as a dependency-free 
 python3 -m http.server 8000
 ```
 
-Then open `http://localhost:8000`.
+Open `http://localhost:8000`.
 
-## Structure
-
-- `index.html` — page content and accessible structure
-- `styles.css` — responsive visual system and motion
-- `app.js` — interaction logic
-- `auth.html` and `auth.js` — account access interface
-- `assets/` — favicon and optimized hero artwork
+The account forms are presentation-ready and require connection to an authentication backend for real account creation.

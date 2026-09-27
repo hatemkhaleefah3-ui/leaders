@@ -2,169 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0c2f8f">
-  <meta name="description" content="Leaders is a modern leadership studio for people building what comes next.">
-  <title>Leaders — Lead what comes next</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#6246e5">
+  <meta name="description" content="Leaders is a colorful study platform that turns ambitious goals into calm, focused progress.">
+  <title>Leaders — Your study space</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="Leaders home">
-      <span class="brand-dot" aria-hidden="true"></span>
-      LEADERS
-    </a>
-    <nav class="desktop-nav" aria-label="Primary navigation">
-      <a href="#approach"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="m15 9-2 4-4 2 2-4z"/></svg></span><span>Approach</span></a>
-      <a href="#programs"><span class="nav-icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></span><span>Programs</span></a>
-      <a href="#stories"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M5 18.5A3.5 3.5 0 0 1 8.5 15H20V4H7a3 3 0 0 0-3 3v11a2 2 0 0 0 2 2h14"/><path d="M8 8h8M8 11h6"/></svg></span><span>Stories</span></a>
-      <a href="#ideas"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M8.5 14.5A6 6 0 1 1 15.5 14.5c-1.1.8-1.5 1.5-1.5 2.5h-4c0-1-.4-1.7-1.5-2.5Z"/></svg></span><span>Ideas</span></a>
-      <a class="nav-join" href="auth.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3.5 19c.6-3.1 2.4-5 5.5-5s4.9 1.9 5.5 5M17 8v6M14 11h6"/></svg></span><span>Join</span></a>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Leaders home"><span class="brand-shape"><svg viewBox="0 0 24 24"><path d="M5 6.5 12 3l7 3.5-7 3.5z"/><path d="M7 9v5.5c0 2 2.3 3.5 5 3.5s5-1.5 5-3.5V9"/></svg></span><span>leaders<small>STUDY</small></span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="active" href="#home"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="m4 11 8-7 8 7v9h-6v-6h-4v6H4z"/></svg></span><span>Home</span></a>
+      <a href="#paths"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M5 5.5A2.5 2.5 0 0 1 7.5 3H20v15H7.5A2.5 2.5 0 0 0 5 20.5z"/><path d="M5 5.5v15M9 7h7M9 11h6"/></svg></span><span>Paths</span></a>
+      <a href="#planner"><span class="nav-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4M17 3v4M3 10h18M8 14h3M8 17h7"/></svg></span><span>Planner</span></a>
+      <a href="#community"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2"/><path d="M3 20c.7-4 2.7-6 6-6s5.3 2 6 6M15 15c3 0 4.8 1.7 5.3 5"/></svg></span><span>Community</span></a>
+      <a class="mobile-profile" href="auth.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 21c.7-4.5 3-7 7-7s6.3 2.5 7 7"/></svg></span><span>Profile</span></a>
     </nav>
-    <a class="pill-button header-cta" href="auth.html">Join Leaders <span class="icon"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <div class="nav-tools">
+      <button class="tool-button search-trigger" type="button" aria-label="Search courses"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span>Search</span><kbd>⌘ K</kbd></button>
+      <span class="streak-pill"><svg viewBox="0 0 24 24"><path d="M13 3s1 4-2 6c-2-3-5-3-5-3s-2 4 0 8c1.4 2.8 3.7 4 6 4 3.3 0 6-2.7 6-6 0-4-5-9-5-9Z"/><path d="M10 18c-1.2-2 .2-4.1 2-5.5 1.7 1.4 3 3.7 1.8 5.5"/></svg><b>12</b><span>day streak</span></span>
+      <a class="join-button" href="auth.html">Join free<span class="button-icon"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    </div>
   </header>
 
   <main id="main">
-    <section class="hero" aria-labelledby="hero-heading">
-      <img class="hero-image" src="assets/leaders-hero.webp" alt="A diverse group of four leaders in a colorful studio" width="2048" height="1280">
-      <div class="hero-wash" aria-hidden="true"></div>
-      <div class="hero-content reveal">
-        <p class="eyebrow light">Leadership, reimagined</p>
-        <h1 id="hero-heading">Lead what<br>comes <em>next.</em></h1>
-        <p class="hero-copy">Build the clarity, courage, and collective power to move people—and possibility—forward.</p>
+    <section class="hero page-shell" id="home">
+      <div class="hero-copy reveal">
+        <span class="soft-badge"><i></i> A calmer way to make progress</span>
+        <h1>Study brighter.<br><em>Grow further.</em></h1>
+        <p>Turn big goals into focused sessions, guided learning paths, and progress you can actually feel.</p>
         <div class="hero-actions">
-          <button class="button button-citrus js-open-diagnostic" type="button">Discover your edge <span class="icon"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
-          <a class="text-link light-link" href="#programs">Explore programs <span class="icon"><svg viewBox="0 0 24 24"><path d="M12 4v16M6 14l6 6 6-6"/></svg></span></a>
+          <button class="primary-button planner-trigger" type="button">Build my study plan<span class="button-icon"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+          <a class="secondary-button" href="#paths"><span class="button-icon pale"><svg viewBox="0 0 24 24"><path d="M5 5.5A2.5 2.5 0 0 1 7.5 3H20v15H7.5A2.5 2.5 0 0 0 5 20.5z"/><path d="M5 5.5v15M9 7h7M9 11h6"/></svg></span>Explore paths</a>
         </div>
+        <div class="hero-proof"><div class="mini-avatars"><span>AM</span><span>RK</span><span>JL</span><span>+2k</span></div><p><strong>4.9 average rating</strong><br>from focused learners</p></div>
       </div>
-      <div class="hero-stamp" aria-hidden="true">
-        <svg viewBox="0 0 120 120"><defs><path id="circle" d="M60,60 m-43,0 a43,43 0 1,1 86,0 a43,43 0 1,1 -86,0"/></defs><text><textPath href="#circle">BUILD CLARITY • MOVE TOGETHER • </textPath></text><circle cx="60" cy="60" r="6"/></svg>
-      </div>
-      <div class="hero-index" aria-hidden="true"><span>01</span><i></i><span>05</span></div>
-    </section>
 
-    <section class="manifesto section-grid" id="approach">
-      <div class="section-label reveal"><span>01</span> Our conviction</div>
-      <div class="manifesto-copy reveal">
-        <p class="eyebrow">A human advantage</p>
-        <h2>The future belongs to leaders who can hold <span class="marker coral">tension</span>, create <span class="marker blue">clarity</span>, and move <span class="marker yellow">together.</span></h2>
-        <p>Leadership is not a title. It is a daily practice of seeing what others miss, asking better questions, and building the conditions where people do their best work.</p>
-      </div>
-    </section>
-
-    <section class="metrics" aria-label="Our impact">
-      <article class="metric reveal"><strong data-counter="12000">0</strong><span>leaders activated</span></article>
-      <article class="metric reveal"><strong data-counter="46">0</strong><span>countries connected</span></article>
-      <article class="metric reveal"><strong data-counter="92" data-suffix="%">0</strong><span>apply a new behavior</span></article>
-      <article class="metric coral-card reveal"><span class="metric-symbol"><svg viewBox="0 0 24 24"><path d="M5 17 17 5M8 5h9v9"/></svg></span><p>Real shifts.<br>Measurable movement.</p></article>
-    </section>
-
-    <section class="programs" id="programs">
-      <div class="programs-head reveal">
-        <div><p class="eyebrow light">Built around your moment</p><h2>Choose your<br><em>next move.</em></h2></div>
-        <p>Focused programs for the moments that shape leaders, teams, and organizations.</p>
-      </div>
-      <div class="program-tabs" role="tablist" aria-label="Leadership programs">
-        <button type="button" role="tab" aria-selected="true" aria-controls="program-panel" data-program="emerging">Emerging leaders</button>
-        <button type="button" role="tab" aria-selected="false" aria-controls="program-panel" data-program="executive">Executive teams</button>
-        <button type="button" role="tab" aria-selected="false" aria-controls="program-panel" data-program="change">Change makers</button>
-      </div>
-      <div class="program-panel" id="program-panel" role="tabpanel" tabindex="0">
-        <div class="program-number" aria-hidden="true">01</div>
-        <div class="program-content">
-          <p class="eyebrow" id="program-kicker">8 week cohort</p>
-          <h3 id="program-title">Step into your influence.</h3>
-          <p id="program-copy">Turn self-awareness into meaningful action. Build the confidence and tools to lead before the title arrives.</p>
-          <ul id="program-list"><li>Live practice labs</li><li>Peer learning circle</li><li>Personal edge map</li></ul>
-          <button class="text-link dark-link js-open-diagnostic" type="button">See if it fits <span class="icon"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+      <div class="study-board reveal" aria-label="Example study dashboard">
+        <div class="board-glow glow-one"></div><div class="board-glow glow-two"></div>
+        <div class="board-head"><div><span>Today</span><strong>Good morning, Maya</strong></div><button type="button" aria-label="Open notifications"><svg viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 1 12 0c0 7 3 7 3 7H3s3 0 3-7M10 20h4"/></svg><i></i></button></div>
+        <article class="focus-card"><div class="focus-top"><span class="course-symbol violet"><svg viewBox="0 0 24 24"><path d="M5 5.5A2.5 2.5 0 0 1 7.5 3H20v15H7.5A2.5 2.5 0 0 0 5 20.5z"/><path d="M5 5.5v15M9 7h7M9 11h6"/></svg></span><span class="focus-time">25 min</span></div><p>Continue learning</p><h3>Linear algebra essentials</h3><div class="progress-line"><i style="width:68%"></i></div><footer><span>Lesson 8 of 12</span><button type="button" class="round-action" aria-label="Continue lesson"><svg viewBox="0 0 24 24"><path d="m9 6 8 6-8 6z"/></svg></button></footer></article>
+        <div class="board-grid">
+          <article class="mini-card goal-card"><span class="mini-card-icon mint"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 4v3M20 12h-3"/></svg></span><div><b>Weekly goal</b><span>4 of 5 sessions</span></div><div class="donut"><b>80</b></div></article>
+          <article class="mini-card quiz-card"><span class="mini-card-icon peach"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v6c0 4.5 3.2 7 8 8 4.8-1 8-3.5 8-8V7z"/><path d="m9 12 2 2 4-5"/></svg></span><div><b>Quick quiz</b><span>Test your recall</span></div><button type="button" aria-label="Start quiz"><svg viewBox="0 0 24 24"><path d="m9 6 8 6-8 6z"/></svg></button></article>
         </div>
-        <div class="program-visual" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit-core">L</div></div>
+        <div class="floating-note"><span class="note-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v13H8l-4 4z"/><path d="M8 9h8M8 13h5"/></svg></span><div><b>Coach note</b><span>Small sessions compound.</span></div></div>
       </div>
     </section>
 
-    <section class="principles section-grid" id="ideas">
-      <div class="section-label reveal"><span>02</span> How we work</div>
-      <div class="principles-content">
-        <div class="principles-title reveal"><p class="eyebrow">Practice over theory</p><h2>Ideas you can use<br>on <em>Monday.</em></h2></div>
-        <div class="accordion">
-          <article class="accordion-item open">
-            <button type="button" aria-expanded="true"><span><i>01</i> Start with the real work</span><b>−</b></button>
-            <div class="accordion-content"><p>Bring the live challenge into the room. Every tool is tested against the conversations, choices, and constraints already on your desk.</p></div>
-          </article>
-          <article class="accordion-item">
-            <button type="button" aria-expanded="false"><span><i>02</i> Learn in public</span><b>+</b></button>
-            <div class="accordion-content"><p>Leadership grows through observation and honest reflection. Practice with peers who challenge your defaults and expand your range.</p></div>
-          </article>
-          <article class="accordion-item">
-            <button type="button" aria-expanded="false"><span><i>03</i> Make the shift visible</span><b>+</b></button>
-            <div class="accordion-content"><p>Translate intention into small, observable behaviors. Measure what changes in the room, across the team, and through the work.</p></div>
-          </article>
-        </div>
+    <section class="trust-strip"><span>Built for focused learners</span><div><b>12k+</b> active students</div><div><b>38</b> guided paths</div><div><b>92%</b> reach their weekly goal</div></section>
+
+    <section class="paths page-shell" id="paths">
+      <div class="section-heading reveal"><div><span class="section-kicker">Explore your next subject</span><h2>Pick a path.<br><em>Make it yours.</em></h2></div><p>Every path combines concise lessons, useful practice, and a pace that fits real life.</p></div>
+      <div class="filter-row" role="group" aria-label="Filter study paths">
+        <button class="active" type="button" data-filter="all">All paths</button><button type="button" data-filter="stem">STEM</button><button type="button" data-filter="language">Languages</button><button type="button" data-filter="design">Design</button><button type="button" data-filter="business">Business</button>
+      </div>
+      <div class="course-grid">
+        <article class="course-card lavender reveal" data-category="stem" data-search="data thinking statistics mathematics"><div class="course-top"><span class="course-symbol violet"><svg viewBox="0 0 24 24"><path d="M5 19 10 5h4l5 14M7 14h10"/></svg></span><span class="level">Beginner</span></div><div><span class="course-label">Data science</span><h3>Think clearly with data</h3><p>Statistics, visual reasoning, and smarter decisions in 18 focused lessons.</p></div><footer><div><span>18 lessons</span><span>6 weeks</span></div><a href="auth.html" aria-label="Open Think clearly with data"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></footer></article>
+        <article class="course-card sky reveal" data-category="language" data-search="english confident conversation language speaking"><div class="course-top"><span class="course-symbol cyan"><svg viewBox="0 0 24 24"><path d="M4 5h10v12H8l-4 4z"/><path d="M9 8h10v10h-3l-2 2"/></svg></span><span class="level">All levels</span></div><div><span class="course-label">Communication</span><h3>Confident English</h3><p>Speak naturally, build range, and communicate your ideas with clarity.</p></div><footer><div><span>24 lessons</span><span>8 weeks</span></div><a href="auth.html" aria-label="Open Confident English"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></footer></article>
+        <article class="course-card butter reveal" data-category="design" data-search="design product ux interface visual"><div class="course-top"><span class="course-symbol amber"><svg viewBox="0 0 24 24"><path d="M12 3 4 7l8 4 8-4zM4 12l8 4 8-4M4 17l8 4 8-4"/></svg></span><span class="level">Intermediate</span></div><div><span class="course-label">Product design</span><h3>Design useful things</h3><p>Move from research to refined interfaces through practical studio projects.</p></div><footer><div><span>16 lessons</span><span>5 weeks</span></div><a href="auth.html" aria-label="Open Design useful things"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></footer></article>
+        <article class="course-card rose reveal" data-category="business" data-search="business strategy leadership decisions"><div class="course-top"><span class="course-symbol coral"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19V3M2 19h22"/></svg></span><span class="level">Intermediate</span></div><div><span class="course-label">Business</span><h3>Strategy that moves</h3><p>Frame hard choices, align priorities, and turn direction into momentum.</p></div><footer><div><span>14 lessons</span><span>4 weeks</span></div><a href="auth.html" aria-label="Open Strategy that moves"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></footer></article>
+      </div>
+      <p class="empty-state" hidden>No paths match your search yet.</p>
+    </section>
+
+    <section class="planner-section" id="planner">
+      <div class="planner-inner page-shell">
+        <div class="planner-copy reveal"><span class="section-kicker light">Designed around your real week</span><h2>A plan that bends.<br><em>Progress that stays.</em></h2><p>Tell us what you want to achieve and how much time you have. Leaders turns it into a clear weekly rhythm.</p><button class="light-button planner-trigger" type="button">Create my plan<span class="button-icon"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button></div>
+        <div class="week-card reveal"><header><div><span>Your week</span><b>4h 10m planned</b></div><span class="week-score">On track</span></header><div class="week-days"><div><span>M</span><i style="height:46%"></i><small>25m</small></div><div><span>T</span><i style="height:76%"></i><small>45m</small></div><div class="rest"><span>W</span><i></i><small>Rest</small></div><div><span>T</span><i style="height:100%"></i><small>60m</small></div><div><span>F</span><i style="height:62%"></i><small>35m</small></div><div><span>S</span><i style="height:88%"></i><small>50m</small></div><div class="rest"><span>S</span><i></i><small>Reset</small></div></div><footer><span><i></i> Focus sessions</span><b>5 day rhythm</b></footer></div>
       </div>
     </section>
 
-    <section class="story-section" id="stories">
-      <div class="story-top reveal">
-        <div><p class="eyebrow light">From the field</p><h2>Change you<br>can <em>feel.</em></h2></div>
-        <div class="story-controls"><button class="circle-button" id="story-prev" type="button" aria-label="Previous story"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button><button class="circle-button" id="story-next" type="button" aria-label="Next story"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
-      </div>
-      <div class="story-track" aria-live="polite">
-        <article class="story-card active" data-story="0">
-          <blockquote>“I stopped trying to have every answer. The team got stronger the moment I started creating better questions.”</blockquote>
-          <footer><span class="avatar avatar-coral">AM</span><div><strong>Amina M.</strong><span>VP, Product • Nairobi</span></div></footer>
-        </article>
-        <article class="story-card" data-story="1">
-          <blockquote>“The program gave us a shared language for the conversations we had been avoiding. That changed everything.”</blockquote>
-          <footer><span class="avatar avatar-yellow">JT</span><div><strong>Jon T.</strong><span>Founder • London</span></div></footer>
-        </article>
-        <article class="story-card" data-story="2">
-          <blockquote>“We moved from a group of smart individuals to a team that could actually think—and decide—together.”</blockquote>
-          <footer><span class="avatar avatar-blue">SL</span><div><strong>Sofia L.</strong><span>Chief People Officer • São Paulo</span></div></footer>
-        </article>
-      </div>
-      <div class="story-progress"><i></i></div>
+    <section class="community page-shell" id="community">
+      <div class="community-card reveal"><span class="quote-mark"><svg viewBox="0 0 24 24"><path d="M4 13c0-5 2-8 7-9v3c-2 .7-3 2-3 4h3v7H4zM13 13c0-5 2-8 7-9v3c-2 .7-3 2-3 4h3v7h-7z"/></svg></span><blockquote>“For the first time, studying feels less like catching up and more like moving forward.”</blockquote><div class="student"><span>NO</span><div><b>Noor A.</b><small>Engineering student</small></div></div></div>
+      <div class="community-copy reveal"><span class="section-kicker">Learn beside people who get it</span><h2>Focused alone.<br><em>Never isolated.</em></h2><p>Join quiet study rooms, ask useful questions, and celebrate meaningful progress with learners around the world.</p><a class="secondary-button" href="auth.html">Meet the community<span class="button-icon pale"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
     </section>
 
-    <section class="cta-section">
-      <div class="cta-shape shape-one" aria-hidden="true"></div><div class="cta-shape shape-two" aria-hidden="true"></div>
-      <div class="cta-content reveal">
-        <p class="eyebrow">Your move</p>
-        <h2>What kind of leader<br>are you becoming?</h2>
-        <p>Five questions. One useful perspective. A sharper place to begin.</p>
-        <button class="button button-ink js-open-diagnostic" type="button">Find your leadership edge <span class="icon"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
-      </div>
-    </section>
+    <section class="final-cta page-shell"><div class="cta-card reveal"><div class="cta-orb one"></div><div class="cta-orb two"></div><span class="section-kicker light">Your next chapter</span><h2>Ready when<br><em>you are.</em></h2><p>Start with one goal. We will help you make it a habit.</p><a class="white-button" href="auth.html">Join Leaders free<span class="button-icon dark"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div></section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-main">
-      <div><a class="brand footer-brand" href="#top"><span class="brand-dot"></span>LEADERS</a><p>For people building what comes next.</p></div>
-      <form class="newsletter" id="newsletter-form"><label for="email">One useful idea, every other Friday.</label><div><input id="email" type="email" placeholder="Your email address" required autocomplete="email"><button type="submit" aria-label="Subscribe"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div><p class="form-note" id="form-note" aria-live="polite"></p></form>
-    </div>
-    <div class="footer-bottom"><span>© 2026 Leaders Studio</span><div><a href="#">Privacy</a><a href="#">LinkedIn</a><a href="mailto:hello@leaders.studio">hello@leaders.studio</a></div></div>
-  </footer>
+  <footer class="footer page-shell"><div class="brand"><span class="brand-shape"><svg viewBox="0 0 24 24"><path d="M5 6.5 12 3l7 3.5-7 3.5z"/><path d="M7 9v5.5c0 2 2.3 3.5 5 3.5s5-1.5 5-3.5V9"/></svg></span><span>leaders<small>STUDY</small></span></div><p>Small sessions. Meaningful progress.</p><div><a href="#paths">Paths</a><a href="#planner">Planner</a><a href="auth.html">Join</a></div></footer>
 
-  <dialog class="diagnostic" id="diagnostic-dialog" aria-labelledby="diagnostic-title">
-    <div class="diagnostic-shell">
-      <button class="dialog-close" type="button" aria-label="Close diagnostic"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
-      <div class="diagnostic-aside"><a class="brand"><span class="brand-dot"></span>LEADERS</a><div><span id="question-count">01 / 05</span><div class="progress"><i id="diagnostic-progress"></i></div><p>There are no wrong answers. Choose the response that feels most like you today.</p></div></div>
-      <div class="diagnostic-main">
-        <section id="diagnostic-questions">
-          <p class="eyebrow">Leadership edge finder</p>
-          <h2 id="diagnostic-title">When the path is unclear, you usually…</h2>
-          <div class="answer-list" id="answer-list"></div>
-          <button class="back-button" id="diagnostic-back" type="button" hidden><span class="icon"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span> Previous question</button>
-        </section>
-        <section class="diagnostic-result" id="diagnostic-result" hidden>
-          <p class="eyebrow">Your current edge</p><div class="result-badge" id="result-badge">CA</div><h2 id="result-title">The Catalyst</h2><p id="result-copy"></p>
-          <div class="result-bars"><div><span>Vision</span><i><b id="bar-vision"></b></i></div><div><span>Connection</span><i><b id="bar-connection"></b></i></div><div><span>Delivery</span><i><b id="bar-delivery"></b></i></div></div>
-          <button class="button button-citrus" id="result-reset" type="button">Try again <span class="icon"><svg viewBox="0 0 24 24"><path d="M20 7v5h-5M19 12a7 7 0 1 0-2 5"/></svg></span></button>
-        </section>
-      </div>
-    </div>
-  </dialog>
+  <dialog class="search-dialog" id="search-dialog"><div class="search-box"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="course-search" type="search" placeholder="Search paths, subjects, or skills" autocomplete="off"><button class="dialog-close" type="button" aria-label="Close search"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div class="search-hint"><span>Try “data”, “English”, or “design”</span><kbd>ESC</kbd></div></dialog>
+
+  <dialog class="planner-dialog" id="planner-dialog"><div class="planner-modal"><button class="dialog-close planner-close" type="button" aria-label="Close planner"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button><div class="modal-head"><span class="section-kicker">Personal study planner</span><h2>Build a rhythm<br>that fits.</h2><p>Choose a goal and weekly pace. We will shape the first version of your plan.</p></div><div class="planner-form" id="planner-form"><fieldset><legend>What matters most right now?</legend><div class="choice-grid"><button class="choice active" type="button" data-goal="Exam confidence"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5zM8 8h8M8 12h6M8 16h4"/></svg><span>Exam confidence</span></button><button class="choice" type="button" data-goal="Build a skill"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v6c0 4.5 3.2 7 8 8 4.8-1 8-3.5 8-8V7z"/><path d="m9 12 2 2 4-5"/></svg><span>Build a skill</span></button><button class="choice" type="button" data-goal="Stay consistent"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 3-6.2M4 4v5h5"/></svg><span>Stay consistent</span></button></div></fieldset><fieldset><legend>Minutes per study day</legend><div class="range-row"><input id="minutes-range" type="range" min="15" max="90" value="35" step="5"><output id="minutes-output">35 min</output></div></fieldset><fieldset><legend>Study days per week</legend><div class="day-choices"> <button type="button">M</button><button class="active" type="button">T</button><button type="button">W</button><button class="active" type="button">T</button><button type="button">F</button><button class="active" type="button">S</button><button type="button">S</button></div></fieldset><button class="primary-button generate-plan" type="button">Generate my plan<span class="button-icon"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button></div><div class="plan-result" id="plan-result" hidden><span class="result-check"><svg viewBox="0 0 24 24"><path d="m6 12 4 4 8-9"/></svg></span><p>Your starting rhythm</p><h3 id="result-goal">Exam confidence</h3><div><span><b id="result-sessions">3</b> sessions</span><span><b id="result-minutes">105</b> min / week</span></div><p>Start small this week. You can adjust the rhythm whenever life changes.</p><a class="primary-button" href="auth.html">Save my plan<span class="button-icon"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div></div></dialog>
 </body>
 </html>
