@@ -1,0 +1,41 @@
+html,body{width:100%;max-width:100%;overflow-x:hidden;overflow-x:clip}.mobile-nav{display:none}main,section,header,footer,nav,div,article{min-width:0}svg{flex:none}
+
+@media(max-width:700px){
+  :root{--shell:calc(100% - 30px)}
+  html,body{width:100%;max-width:100%;overflow-x:hidden;overflow-x:clip}
+  body{padding-bottom:90px}
+  .topbar{width:100%;max-width:100%;position:sticky;top:0;left:0;right:0;overflow:visible}
+  .topbar .main-nav{display:none!important}
+  .mobile-nav{position:fixed;z-index:500;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));left:max(8px,env(safe-area-inset-left));right:max(8px,env(safe-area-inset-right));bottom:max(8px,env(safe-area-inset-bottom));width:auto;max-width:none;height:68px;padding:5px;background:rgba(32,32,57,.97);border:1px solid rgba(255,255,255,.13);border-radius:22px;box-shadow:0 16px 42px rgba(25,20,58,.32);backdrop-filter:blur(18px);transform:none}
+  .mobile-nav a{min-width:0;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border-radius:17px;color:#aaa8bc;font-size:9px;font-weight:800;line-height:1}
+  .mobile-nav a.active,.mobile-nav a:focus,.mobile-nav a:hover{background:rgba(255,255,255,.09);color:white}
+  .mobile-nav svg{width:21px;height:21px}
+  .page-shell{width:calc(100% - 30px);max-width:calc(100% - 30px)}
+  main,.hero,.hero-copy,.study-board,.board-grid,.paths,.course-grid,.planner-inner,.community,.final-cta,.footer{width:100%;max-width:100%;min-width:0}
+  .hero{width:calc(100% - 30px);margin-inline:auto;padding-inline:0}
+  .hero-copy>p,.section-heading>p,.planner-copy>p,.community-copy>p{width:100%;max-width:100%}
+  .hero h1{font-size:clamp(48px,14.2vw,66px);max-width:100%;overflow-wrap:normal}
+  .hero h1 em{white-space:nowrap}
+  .hero-actions,.hero-actions>*{width:100%;max-width:100%;min-width:0}
+  .study-board{overflow:hidden;padding-bottom:78px}
+  .study-board:before{right:0;bottom:0}
+  .board-glow{display:none}
+  .floating-note{right:14px;left:14px;bottom:15px;width:auto;max-width:none}
+  .trust-strip{width:100%;max-width:100%;overflow:hidden}
+  .filter-row{max-width:calc(100vw - 15px)}
+  .course-card{width:100%;max-width:100%}
+  .planner-section{width:calc(100% - 16px);max-width:calc(100% - 16px);margin-inline:8px}
+  .week-card,.community-card,.cta-card{width:100%;max-width:100%;overflow:hidden}
+  .week-days{grid-template-columns:repeat(7,minmax(0,1fr))}
+  .search-dialog,.planner-dialog{width:calc(100% - 16px);max-width:calc(100% - 16px)}
+  .planner-modal{width:100%;max-width:100%}
+  .choice-grid,.day-choices{max-width:100%}
+
+  .account-page{padding-bottom:90px!important;width:100%;max-width:100%;overflow-x:hidden;overflow-x:clip}
+  .account-topbar{position:sticky;top:0;z-index:100;width:100%;max-width:100%}
+  .account-layout,.account-art,.account-panel,.account-card,.account-form-panel,.account-form{width:100%;max-width:100%;min-width:0}
+  .account-art{width:calc(100% - 16px);max-width:calc(100% - 16px);margin:8px}
+  .account-panel{padding-inline:20px}
+  .account-form label,.account-form label>div,.account-form input{min-width:0;max-width:100%}
+  .account-mobile-nav{display:grid}
+}

@@ -3,7 +3,7 @@ const $=(selector,scope=document)=>scope.querySelector(selector);const $$=(selec
 const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target)}}),{threshold:.13});
 $$('.reveal').forEach(element=>revealObserver.observe(element));
 
-const navLinks=$$('.main-nav a[href^="#"]');
+const navLinks=$$('.main-nav a[href^="#"],.mobile-nav a[href^="#"]');
 const sections=navLinks.map(link=>$(link.getAttribute('href'))).filter(Boolean);
 const sectionObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){navLinks.forEach(link=>link.classList.toggle('active',link.getAttribute('href')===`#${entry.target.id}`))}}),{rootMargin:'-38% 0px -55%'});
 sections.forEach(section=>sectionObserver.observe(section));

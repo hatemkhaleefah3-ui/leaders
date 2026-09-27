@@ -2,70 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#171714">
-  <meta name="description" content="Join Leaders or sign in to continue your leadership journey.">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#6246e5">
+  <meta name="description" content="Create your Leaders study account or sign in.">
   <title>Join Leaders</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="auth.css">
+  <link rel="stylesheet" href="fixes.css">
   <script src="auth.js" defer></script>
 </head>
-<body class="auth-page">
-  <header class="site-header">
-    <a class="brand" href="index.html"><span class="brand-dot" aria-hidden="true"></span>LEADERS</a>
-    <nav class="desktop-nav" aria-label="Primary navigation">
-      <a href="index.html#approach"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="m15 9-2 4-4 2 2-4z"/></svg></span><span>Approach</span></a>
-      <a href="index.html#programs"><span class="nav-icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></span><span>Programs</span></a>
-      <a href="index.html#stories"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M5 18.5A3.5 3.5 0 0 1 8.5 15H20V4H7a3 3 0 0 0-3 3v11a2 2 0 0 0 2 2h14"/><path d="M8 8h8M8 11h6"/></svg></span><span>Stories</span></a>
-      <a href="index.html#ideas"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M8.5 14.5A6 6 0 1 1 15.5 14.5c-1.1.8-1.5 1.5-1.5 2.5h-4c0-1-.4-1.7-1.5-2.5Z"/></svg></span><span>Ideas</span></a>
-      <a class="nav-join" href="auth.html" aria-current="page"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3.5 19c.6-3.1 2.4-5 5.5-5s4.9 1.9 5.5 5M17 8v6M14 11h6"/></svg></span><span>Join</span></a>
-    </nav>
-    <a class="auth-back" href="index.html"><span class="icon"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span>Back to home</a>
+<body class="account-page">
+  <header class="account-topbar">
+    <a class="brand" href="index.html"><span class="brand-shape"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M5 6.5 12 3l7 3.5-7 3.5z"/><path d="M7 9v5.5c0 2 2.3 3.5 5 3.5s5-1.5 5-3.5V9"/></svg></span><span>leaders<small>STUDY</small></span></a>
+    <a class="account-back" href="index.html"><span><svg width="17" height="17" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span>Back home</a>
   </header>
 
-  <main class="auth-layout">
-    <section class="auth-editorial">
-      <div class="auth-number">01 / ACCESS</div>
-      <div>
-        <p class="eyebrow light">The work starts here</p>
-        <h1>Become the leader<br>your moment <em>needs.</em></h1>
-        <p>Join a global practice of people building clearer decisions, stronger teams, and meaningful momentum.</p>
-      </div>
-      <blockquote>“Leadership begins when responsibility becomes a choice.”</blockquote>
+  <nav class="mobile-nav account-mobile-nav" aria-label="Mobile navigation">
+    <a href="index.html#home"><svg width="22" height="22" viewBox="0 0 24 24"><path d="m4 11 8-7 8 7v9h-6v-6h-4v6H4z"/></svg><span>Home</span></a>
+    <a href="index.html#paths"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M5 5.5A2.5 2.5 0 0 1 7.5 3H20v15H7.5A2.5 2.5 0 0 0 5 20.5z"/><path d="M5 5.5v15M9 7h7M9 11h6"/></svg><span>Paths</span></a>
+    <a href="index.html#planner"><svg width="22" height="22" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4M17 3v4M3 10h18"/></svg><span>Planner</span></a>
+    <a class="active" href="auth.html"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 21c.7-4.5 3-7 7-7s6.3 2.5 7 7"/></svg><span>Profile</span></a>
+  </nav>
+
+  <main class="account-layout">
+    <section class="account-art">
+      <div class="art-orb art-one"></div><div class="art-orb art-two"></div><div class="art-orb art-three"></div>
+      <div class="account-art-copy"><span class="section-kicker light">Your study space</span><h1>Big goals.<br><em>Better rhythm.</em></h1><p>Plan calmly, learn actively, and keep your progress in one beautifully focused place.</p></div>
+      <div class="account-preview"><div><span class="mini-card-icon mint"><svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg></span><p><b>Weekly focus</b><span>4 of 5 sessions complete</span></p><strong>80%</strong></div><i><b style="width:80%"></b></i></div>
     </section>
 
-    <section class="auth-panel" aria-labelledby="auth-title">
-      <div class="auth-card">
-        <div class="auth-tabs" role="tablist" aria-label="Account access">
-          <button type="button" role="tab" id="signup-tab" aria-selected="true" aria-controls="signup-panel">Create account</button>
-          <button type="button" role="tab" id="signin-tab" aria-selected="false" aria-controls="signin-panel">Sign in</button>
-        </div>
+    <section class="account-panel">
+      <div class="account-card">
+        <div class="auth-tabs" role="tablist" aria-label="Account access"><button class="active" id="signup-tab" type="button" role="tab" aria-selected="true" aria-controls="signup-panel">Create account</button><button id="signin-tab" type="button" role="tab" aria-selected="false" aria-controls="signin-panel">Sign in</button></div>
 
-        <div class="auth-form-panel" id="signup-panel" role="tabpanel" aria-labelledby="signup-tab">
-          <p class="eyebrow">New to Leaders</p>
-          <h2 id="auth-title">Create your account.</h2>
-          <p class="auth-intro">Start with the essentials. You can shape your leadership profile after joining.</p>
+        <div class="account-form-panel" id="signup-panel" role="tabpanel" aria-labelledby="signup-tab">
+          <span class="soft-badge"><i></i> Start free today</span><h2>Create your study space.</h2><p>One account for your paths, plans, sessions, and progress.</p>
           <form class="account-form" data-mode="signup">
-            <div class="auth-field"><label for="signup-name">Full name</label><div><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M5 20c.8-4 3.1-6 7-6s6.2 2 7 6"/></svg><input id="signup-name" name="name" autocomplete="name" placeholder="Your full name" required></div></div>
-            <div class="auth-field"><label for="signup-email">Email address</label><div><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><input id="signup-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required></div></div>
-            <div class="auth-field"><label for="signup-password">Password</label><div><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><input id="signup-password" name="password" type="password" autocomplete="new-password" minlength="8" placeholder="At least 8 characters" required></div></div>
-            <label class="auth-check"><input type="checkbox" required><span>I agree to the Terms and Privacy Policy.</span></label>
-            <button class="button button-ink auth-submit" type="submit">Create account <span class="icon"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
-            <p class="auth-status" aria-live="polite"></p>
+            <label>Full name<div><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M5 20c.8-4 3.1-6 7-6s6.2 2 7 6"/></svg><input name="name" autocomplete="name" placeholder="Your full name" required></div></label>
+            <label>Email address<div><svg width="18" height="18" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><input name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div></label>
+            <label>Password<div><svg width="18" height="18" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><input name="password" type="password" autocomplete="new-password" minlength="8" placeholder="At least 8 characters" required></div></label>
+            <label class="check-row"><input type="checkbox" required><span>I agree to the Terms and Privacy Policy.</span></label>
+            <button class="primary-button account-submit" type="submit">Create account<span class="button-icon"><svg width="17" height="17" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button><p class="account-status" aria-live="polite"></p>
           </form>
         </div>
 
-        <div class="auth-form-panel" id="signin-panel" role="tabpanel" aria-labelledby="signin-tab" hidden>
-          <p class="eyebrow">Welcome back</p>
-          <h2>Continue your work.</h2>
-          <p class="auth-intro">Sign in to return to your leadership profile and programs.</p>
+        <div class="account-form-panel" id="signin-panel" role="tabpanel" aria-labelledby="signin-tab" hidden>
+          <span class="soft-badge"><i></i> Welcome back</span><h2>Continue your progress.</h2><p>Your plan and saved paths are waiting for you.</p>
           <form class="account-form" data-mode="signin">
-            <div class="auth-field"><label for="signin-email">Email address</label><div><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><input id="signin-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required></div></div>
-            <div class="auth-field"><label for="signin-password">Password</label><div><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><input id="signin-password" name="password" type="password" autocomplete="current-password" placeholder="Your password" required></div></div>
-            <div class="auth-row"><label class="auth-check"><input type="checkbox"><span>Remember me</span></label><button class="auth-text-button" type="button">Forgot password?</button></div>
-            <button class="button button-ink auth-submit" type="submit">Sign in <span class="icon"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
-            <p class="auth-status" aria-live="polite"></p>
+            <label>Email address<div><svg width="18" height="18" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><input name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div></label>
+            <label>Password<div><svg width="18" height="18" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><input name="password" type="password" autocomplete="current-password" placeholder="Your password" required></div></label>
+            <div class="form-options"><label class="check-row"><input type="checkbox"><span>Remember me</span></label><button type="button">Forgot password?</button></div>
+            <button class="primary-button account-submit" type="submit">Sign in<span class="button-icon"><svg width="17" height="17" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button><p class="account-status" aria-live="polite"></p>
           </form>
         </div>
       </div>
